@@ -39,7 +39,7 @@ int main()
     //bind
     sockaddr_in.sin_family = AF_INET;
     sockaddr_in.sin_port = htons(6000);
-    sockaddr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
+    sockaddr_in.sin_addr.s_addr = INADDR_ANY;
     _bind = bind(_socket, (struct sockaddr *)&sockaddr_in, sizeof(sockaddr_in));
     if (_bind < 0)
         showError("bind");
